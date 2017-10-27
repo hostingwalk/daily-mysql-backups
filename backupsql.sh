@@ -1,7 +1,5 @@
+
 #!/bin/bash
-# MySQL/MariaDB	Back-up	script      
-# Requirments: enough free space / Directadmin
-# ---------------------------------------------------------------------
 
 USER="da_admin"
 PASSWORD="`grep passwd= /usr/local/directadmin/conf/mysql.conf | cut -d\= -f2`"
@@ -12,7 +10,7 @@ PASSWORD="`grep passwd= /usr/local/directadmin/conf/mysql.conf | cut -d\= -f2`"
 databases=`mysql -u $USER -p$PASSWORD -e "SHOW DATABASES;" | tr -d "| " | grep -v Database`
 
 for db in $databases; do
-    if [[ "$db" != "information_schema" ]] && [[ "$db" != "performance_schema" ]] && [[ "$db" $
+    if [[ "$db" != "information_schema" ]] && [[ "$db" != "performance_schema" ]] && [[ "$db" != "mysql" ]] && [[ "$db" != _* ]] ; then
         echo "Dumping database: $db"
         mysqldump -u $USER -p$PASSWORD --databases $db | gzip > `date +%Y%m%d`.$db.sql.gz
        # gzip $OUTPUT/`date +%Y%m%d`.$db.sql
