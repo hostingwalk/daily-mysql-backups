@@ -2,6 +2,7 @@
 Bash script for back-up every mysql / mariadb Databases local
 
 # Install guide
-wget https://raw.githubusercontent.com/hostingwalk/mysql-local-backup-script/master/backupsql.sh
+cd /root && mkdir mysql-backups && cd mysql-backups
+wget https://raw.githubusercontent.com/hostingwalk/mysql-local-backup-script/master/backupsql.sh && chomod 700 backup.sh
 chmod 700 backupsql.sh
 ./backupsql.sh
