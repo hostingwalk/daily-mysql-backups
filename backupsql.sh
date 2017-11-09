@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 USER="da_admin"
