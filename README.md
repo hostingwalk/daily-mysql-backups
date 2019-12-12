@@ -1,4 +1,4 @@
-# mysql-local-backup-script
+# Daily MySQL Backups
 Bash script for back-up every mysql / mariadb Databases local
 
 # Install guide
