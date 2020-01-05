@@ -1,0 +1,9 @@
+[Unit]
+Description=Daily MySQL Backups
+
+[Service]
+Type=simple
+ExecStart=/home/daily-mysql-backups/backupsql.sh
+
+[Install]
+WantedBy=multi-user.target
