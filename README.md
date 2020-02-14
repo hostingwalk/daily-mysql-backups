@@ -12,7 +12,7 @@ $ sudo make install
 # Install guide
 cd /home && mkdir mysql-backups && cd mysql-backups
 
-wget https://raw.githubusercontent.com/hostingwalk/mysql-local-backup-script/master/backupsql.sh && chmod 700 backupsql.sh
+wget https://raw.githubusercontent.com/payrequestio/mysql-local-backup-script/master/backupsql.sh && chmod 700 backupsql.sh
 
 ./backupsql.sh
 
